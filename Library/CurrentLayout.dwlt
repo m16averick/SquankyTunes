@@ -111,7 +111,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 421}
   m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 48
+  controlID: 133
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,8 +154,8 @@ MonoBehaviour:
     y: 0
     width: 712
     height: 380
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -179,8 +179,8 @@ MonoBehaviour:
     y: 380
     width: 712
     height: 351
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -401,9 +401,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.8170114, y: 7.391425, z: -0.089846246}
+    m_Target: {x: -8.33675, y: 0.049658228, z: 0.16364045}
     speed: 2
-    m_Value: {x: -0.8170114, y: 7.391425, z: -0.089846246}
+    m_Value: {x: -8.33675, y: 0.049658228, z: 0.16364045}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -431,9 +431,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 29.717417
+    m_Target: 3.0667672
     speed: 2
-    m_Value: 29.717417
+    m_Value: 3.0667672
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -563,9 +563,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 66290000
-    m_LastClickedID: 10598
-    m_ExpandedIDs: 4ecefcffa08cffff9efbffff000000004a29000050290000
+    m_SelectedIDs: 8a290000
+    m_LastClickedID: 10634
+    m_ExpandedIDs: 9efbffff000000008a290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -627,19 +627,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\m16av\Documents\Squanky Tunes Alpha
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d2270000
-    m_LastClickedID: 10194
-    m_ExpandedIDs: 000000008c27000000ca9a3bffffff7f
+    m_SelectedIDs: 98270000
+    m_LastClickedID: 10136
+    m_ExpandedIDs: 000000008e27000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -667,7 +667,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008c270000
+    m_ExpandedIDs: 000000008e270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -737,7 +737,7 @@ MonoBehaviour:
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Debug
+    m_Text: Inspector
     m_Image: {fileID: -6905738622615590433, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
@@ -749,8 +749,8 @@ MonoBehaviour:
     width: 342
     height: 710
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_ScrollPosition: {x: 0, y: 0}
-  m_InspectorMode: 1
+  m_ScrollPosition: {x: 0, y: 580.9551}
+  m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 100
     m_ControlHash: -371814159
