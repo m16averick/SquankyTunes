@@ -15,12 +15,14 @@ public class GameManager : MonoBehaviour {
 	private ScoreManager theScoreManager;
 
 	public DeathMenu theDeathScreen;
+	public bool powerupReset;
 
 	// Use this for initialization
 	void Start () {
 		platformStartPoint = platformGenerator.position;
 		playerStartPoint = thePlayer.transform.position;
 		theScoreManager = FindObjectOfType<ScoreManager> ();
+
 	}
 	
 	// Update is called once per frame
@@ -36,22 +38,26 @@ public class GameManager : MonoBehaviour {
 
 		theDeathScreen.gameObject.SetActive (true);
 
+
 	}
 
 	public void Reset()
 	{
 		theDeathScreen.gameObject.SetActive (false);
+
+
 		platformList = FindObjectsOfType<PlatformDestroyer> ();
 		for (int i = 0; i < platformList.Length; i++) {
 			platformList[i].gameObject.SetActive(false);
 		}
+
 		thePlayer.transform.position = playerStartPoint;
 		platformGenerator.position = platformStartPoint;
 		thePlayer.gameObject.SetActive (true);
 
 		theScoreManager.scoreCount = 0;
 		theScoreManager.scoreIncreasing = true;
-
+		powerupReset = true;
 	}
 
 	/*public IEnumerator RestartGameCo()

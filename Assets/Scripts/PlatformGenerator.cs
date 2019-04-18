@@ -31,6 +31,10 @@ public class PlatformGenerator : MonoBehaviour {
 	public float randomSpikeThreshold;
 	public ObjectPooler spikePool;
 
+	public float powerupHeight;
+	public ObjectPooler powerupPool;
+	public float powerupThreshold;
+
 	// Use this for initialization
 	void Start () {
 
@@ -64,6 +68,13 @@ public class PlatformGenerator : MonoBehaviour {
 				heightChange = maxHeight;
 			} else if (heightChange < minHeight) {
 				heightChange = minHeight;
+			}
+
+			if (Random.Range (0f, 100f) < powerupThreshold) {
+
+				GameObject newPowerup = powerupPool.GetPooledObject ();
+				newPowerup.transform.position = transform.position + new Vector3 (distanceBetween / 2f, Random.Range(0f, powerupHeight/2), 0f);
+				newPowerup.SetActive (true);
 			}
 
 			transform.position = new Vector3 (transform.position.x + ( platformWidths[platformSelector] / 2 )+ distanceBetween, heightChange, transform.position.z);
