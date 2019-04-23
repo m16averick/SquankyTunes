@@ -30,6 +30,8 @@ public class PlatformGenerator : MonoBehaviour {
 
 	public float randomSpikeThreshold;
 	public ObjectPooler spikePool;
+	public float randomEnemyThreshold;
+	public ObjectPooler enemyPool;
 
 	public float powerupHeight;
 	public ObjectPooler powerupPool;
@@ -91,6 +93,20 @@ public class PlatformGenerator : MonoBehaviour {
 			if(Random.Range(0f, 100f) < randomCoinThreshold) {
 				
 				theCoinGenerator.SpawnCoins(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z));
+			}
+
+			if(Random.Range(0f, 100f) < randomEnemyThreshold) {
+				
+				GameObject newEnemy = enemyPool.GetPooledObject();
+				
+				float enemyXPosition = Random.Range(-platformWidths[platformSelector]/2 + 1f, platformWidths[platformSelector]/2 - 1f);
+				
+				Vector3 enemyPosition = new Vector3(enemyXPosition, 0.5f, 0f);
+				
+				
+				newEnemy.transform.position = transform.position + enemyPosition;
+				newEnemy.transform.rotation = transform.rotation;
+				newEnemy.SetActive(true);
 			}
 
 

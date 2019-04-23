@@ -16,9 +16,12 @@ public class GameManager : MonoBehaviour {
 
 	public DeathMenu theDeathScreen;
 	public bool powerupReset;
+	
+	public string GameMode;
 
 	// Use this for initialization
 	void Start () {
+
 		platformStartPoint = platformGenerator.position;
 		playerStartPoint = thePlayer.transform.position;
 		theScoreManager = FindObjectOfType<ScoreManager> ();

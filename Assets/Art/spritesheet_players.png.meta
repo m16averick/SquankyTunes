@@ -8,6 +8,7 @@ TextureImporter:
     21300002: spritesheet_players_1
     21300004: spritesheet_players_2
     21300006: spritesheet_players_3
+    21300008: spritesheet_players_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -146,6 +147,20 @@ TextureImporter:
         height: 152
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_players_4
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1792
+        width: 109
+        height: 137
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

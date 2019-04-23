@@ -929,6 +929,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &595409944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 595409946}
+  - component: {fileID: 595409945}
+  m_Layer: 0
+  m_Name: EnemyPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &595409945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 595409944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281394fb5f062fe48a93ecafd00f402a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObject: {fileID: 1659973201302042, guid: fe66c42db2446804184b9f63dca427d9,
+    type: 2}
+  pooledAmount: 5
+--- !u!4 &595409946
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 595409944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.1583295, y: 0.37326616, z: -1.2714844}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &631620034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,7 +1806,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1414884578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.26, y: -4.03, z: 0}
+  m_LocalPosition: {x: 0.16, y: -7.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 828534340}
@@ -3129,7 +3172,7 @@ MonoBehaviour:
   generationPoint: {fileID: 2064665910}
   distanceBetween: 0
   distanceBetweenMin: 1
-  distanceBetweenMax: 5
+  distanceBetweenMax: 4
   theObjectPools:
   - {fileID: 749330587}
   - {fileID: 1351872843}
@@ -3137,12 +3180,14 @@ MonoBehaviour:
   - {fileID: 1067803257}
   maxHeightPoint: {fileID: 901484004}
   maxHeightChange: 10
-  randomCoinThreshold: 25
-  randomSpikeThreshold: 20
+  randomCoinThreshold: 75
+  randomSpikeThreshold: 25
   spikePool: {fileID: 1055057251}
+  randomEnemyThreshold: 35
+  enemyPool: {fileID: 595409945}
   powerupHeight: 4
   powerupPool: {fileID: 1519343459}
-  powerupThreshold: 5
+  powerupThreshold: 25
 --- !u!4 &2038157150
 Transform:
   m_ObjectHideFlags: 0
@@ -3347,7 +3392,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2060548392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9, y: 0, z: 0}
+  m_LocalPosition: {x: -8.21, y: -0.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 766615022}
@@ -3365,11 +3410,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e8d111838b80984584581655f8af079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 6
   jumpForce: 10
   jumpTime: 0.25
   speedMultiplier: 1.05
-  speedIncreaseMilestone: 100
+  speedIncreaseMilestone: 20
   speedIncreaseMilestoneStore: 0
   grounded: 0
   whatIsGround:
