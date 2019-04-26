@@ -7,6 +7,8 @@ TextureImporter:
     21300000: spritesheet_items_0
     21300002: powerup1
     21300004: powerup2
+    21300006: powerup3
+    21300008: powerup4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -116,7 +118,7 @@ TextureImporter:
         width: 70
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,7 +132,35 @@ TextureImporter:
         width: 70
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: powerup3
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 168
+        width: 70
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: powerup4
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 40
+        width: 70
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

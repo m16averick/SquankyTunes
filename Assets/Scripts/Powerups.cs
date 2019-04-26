@@ -6,6 +6,7 @@ public class Powerups : MonoBehaviour {
 
 	public bool doublePoints;
 	public bool safeMode;
+	public bool planeMode;
 
 	public float powerupLength;
 
@@ -23,13 +24,16 @@ public class Powerups : MonoBehaviour {
 	// Update is called once per frame
 	void Awake () {
 
-		int powerupSelector = Random.Range (0, 2);
+		int powerupSelector = Random.Range (0, 3);
 		switch (powerupSelector) {
 		case 0:
 			doublePoints = true;
 			break;
 		case 1:
 			safeMode = true;
+			break;
+		case 2:
+			planeMode = true;
 			break;
 
 		}
@@ -41,7 +45,7 @@ public class Powerups : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.name == "Player") {
-			thePowerupManager.ActivatePowerup (doublePoints, safeMode, powerupLength);
+			thePowerupManager.ActivatePowerup (doublePoints, safeMode, planeMode, powerupLength);
 		}
 		gameObject.SetActive (false);
 	}

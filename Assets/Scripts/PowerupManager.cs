@@ -6,6 +6,7 @@ public class PowerupManager : MonoBehaviour {
 	
 	private bool doublePoints;
 	private  bool safeMode;
+	private bool planeMode;
 
 	private bool powerupActive;
 
@@ -53,6 +54,10 @@ public class PowerupManager : MonoBehaviour {
 				thePlatformGenerator.randomSpikeThreshold = 0f;
 			}
 
+			if (planeMode) {
+				Application.LoadLevel ("plane");
+			}
+
 			if(powerupLengthCounter <= 0)
 
 			{
@@ -65,10 +70,11 @@ public class PowerupManager : MonoBehaviour {
 		}
 	}
 
-	public void ActivatePowerup(bool points, bool safe, float time)
+	public void ActivatePowerup(bool points, bool safe, bool plane, float time)
 	{
 		doublePoints = points;
 		safeMode = safe;
+		planeMode = plane;
 		powerupLengthCounter = time;
 
 		//normalPointsPerSecond = theScoreManager.pointsPerSecond;

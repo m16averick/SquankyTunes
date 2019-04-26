@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/endless.unity
     guid: bb6d395391ce26d428ceef91fbcaf560
+  - enabled: 1
+    path: Assets/Scenes/plane.unity
+    guid: 7a9fe1910e08ff04ab748bd84995a89a
