@@ -55,6 +55,8 @@ public class PowerupManager : MonoBehaviour {
 			}
 
 			if (planeMode) {
+
+				PlayerPrefs.SetFloat ("PlaneScore", theScoreManager.scoreCount);
 				Application.LoadLevel ("plane");
 			}
 

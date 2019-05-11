@@ -8,7 +8,14 @@ public class DeathMenu : MonoBehaviour {
 
 	public void RestartGame()
 	{
-		FindObjectOfType<GameManager>().Reset ();
+		//FindObjectOfType<GameManager>().Reset ();
+		Application.LoadLevel ("endless");
+	}
+
+	public void RestartPlane()
+	{
+		FindObjectOfType<GameManager> ().Reset ();
+		Application.LoadLevel ("endless");
 	}
 
 	public void QuitToMain()

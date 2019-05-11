@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour {
 
@@ -22,7 +23,8 @@ public class ScoreManager : MonoBehaviour {
 
 		if(PlayerPrefs.HasKey("HighScore"))
 			hiScoreCount = PlayerPrefs.GetFloat("HighScore");
-		
+		if ( SceneManager.GetActiveScene().name == "plane")
+			scoreCount = PlayerPrefs.GetFloat("PlaneScore");
 	}
 	
 	// Update is called once per frame

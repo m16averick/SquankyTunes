@@ -84,6 +84,8 @@ public class PlayerController : MonoBehaviour {
 				{
 					myRigidBody.velocity = new Vector2 (myRigidBody.velocity.x, jumpForce);		
 					stoppedJumping = false;
+					jumpSound.Stop ();
+
 					jumpSound.Play ();
 
 				}
@@ -93,6 +95,8 @@ public class PlayerController : MonoBehaviour {
 					myRigidBody.velocity = new Vector2 (myRigidBody.velocity.x, jumpForce);		
 					stoppedJumping = false;
 					canDoubleJump = false;
+					jumpSound.Stop ();
+
 					jumpSound.Play ();
 				}
 
