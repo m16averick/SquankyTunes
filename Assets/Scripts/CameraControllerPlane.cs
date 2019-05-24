@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour {
+public class CameraControllerPlane : MonoBehaviour {
 
-	public PlayerController thePlayer;
+	public PlaneController thePlayer;
 
 	private Vector3 LastPlayerPosition;
 	private float distanceToMove;
 
 	// Use this for initialization
 	void Start () {
-		thePlayer = FindObjectOfType<PlayerController>();
+		thePlayer = FindObjectOfType<PlaneController>();
 		LastPlayerPosition = thePlayer.transform.position;
 	}
 	

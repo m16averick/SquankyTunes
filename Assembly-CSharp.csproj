@@ -53,7 +53,8 @@
   <ItemGroup>
      <Compile Include="Assets\PlaneManager.cs" />
      <Compile Include="Assets\Scripts\AudioScript.cs" />
-     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\CameraControllerEndless.cs" />
+     <Compile Include="Assets\Scripts\CameraControllerPlane.cs" />
      <Compile Include="Assets\Scripts\CoinGenerator.cs" />
      <Compile Include="Assets\Scripts\DeathMenu.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
@@ -62,6 +63,7 @@
      <Compile Include="Assets\Scripts\ObjectPooler.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\pickupPoints.cs" />
+     <Compile Include="Assets\Scripts\PlaneController.cs" />
      <Compile Include="Assets\Scripts\PlaneGenerator.cs" />
      <Compile Include="Assets\Scripts\PlatformDestroyer.cs" />
      <Compile Include="Assets\Scripts\PlatformGenerator.cs" />

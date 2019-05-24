@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlaneController : MonoBehaviour {
 
 	public float moveSpeed, jumpForce, jumpTime;
 	public float speedMultiplier;
@@ -58,11 +58,10 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-			
 
-			//grounded = Physics2D.IsTouchingLayers (myCollider, whatIsGround);
 
-			grounded = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, whatIsGround);
+			grounded = Physics2D.IsTouchingLayers (myCollider, whatIsGround);
+
 
 			if (transform.position.x > speedMilestoneCount) 
 			{
@@ -72,39 +71,22 @@ public class PlayerController : MonoBehaviour {
 			}
 
 			myRigidBody.velocity = new Vector2 (moveSpeed, myRigidBody.velocity.y);
+			//transform.Rotate ( Vector3.forward * transform.position.y );
+		transform.eulerAngles = Vector3.forward * transform.position.y * 10 + new Vector3(0,0,18 );
+			//.Rotate (Vector3.forward * 1/transform.position.y);
 
-			if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-			{
-				if (grounded ) 
-				{
-					myRigidBody.velocity = new Vector2 (myRigidBody.velocity.x, jumpForce);		
-					stoppedJumping = false;
-					jumpSound.Stop ();
 
-					jumpSound.Play ();
+		if ((Input.GetKey (KeyCode.Space) || Input.GetMouseButton (0))) {
+			if (jumpTimeCounter > 0) {
+				myRigidBody.velocity = new Vector2 (myRigidBody.velocity.x, jumpForce);
 
-				}
-
-				if (!grounded && canDoubleJump) {
-					jumpTimeCounter = jumpTime;
-					myRigidBody.velocity = new Vector2 (myRigidBody.velocity.x, jumpForce);		
-					stoppedJumping = false;
-					canDoubleJump = false;
-					jumpSound.Stop ();
-
-					jumpSound2.Play ();
-				}
-
+				//transform.Rotate (Vector3.forward * 1/2);
+				jumpTimeCounter -= Time.deltaTime;
 			}
-
-			if ((Input.GetKey (KeyCode.Space) || Input.GetMouseButton (0)) && !stoppedJumping) 
-			{
-				if (jumpTimeCounter > 0) 
-				{
-					myRigidBody.velocity = new Vector2 (myRigidBody.velocity.x, jumpForce);
-					jumpTimeCounter -= Time.deltaTime;
-				}
-			}
+		} /* else if (!grounded){
+			transform.Rotate (Vector3.back * 1/2);
+		} */
+			
 
 			if (Input.GetKeyUp (KeyCode.Space) || Input.GetMouseButtonUp (0)) 
 			{
@@ -112,22 +94,16 @@ public class PlayerController : MonoBehaviour {
 				stoppedJumping = true;
 			}
 
-			if (grounded) 
-			{
+
+			
 				jumpTimeCounter = jumpTime;
 				canDoubleJump = true;
-			}
+			
 
-			myAnimator.SetFloat ("Speed", myRigidBody.velocity.x);
-			myAnimator.SetBool ("Grounded", grounded);
-
+			//myAnimator.SetFloat ("Speed", myRigidBody.velocity.x);
+			//myAnimator.SetBool ("Grounded", grounded);
 
 		
-
-
-	
-	
-
 
 
 	}
