@@ -55,6 +55,8 @@
      <Compile Include="Assets\Scripts\AudioScript.cs" />
      <Compile Include="Assets\Scripts\CameraControllerEndless.cs" />
      <Compile Include="Assets\Scripts\CameraControllerPlane.cs" />
+     <Compile Include="Assets\Scripts\CameraLocked.cs" />
+     <Compile Include="Assets\Scripts\CatcherMove.cs" />
      <Compile Include="Assets\Scripts\CoinGenerator.cs" />
      <Compile Include="Assets\Scripts\DeathMenu.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />

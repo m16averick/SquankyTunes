@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114429781868425926}
   - component: {fileID: 114027685127517206}
   - component: {fileID: 50222300621099960}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4112237431420190}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundDetector
   m_TagString: Untagged
   m_Icon: {fileID: 1654036009018553494, guid: 0000000000000000d000000000000000, type: 0}
