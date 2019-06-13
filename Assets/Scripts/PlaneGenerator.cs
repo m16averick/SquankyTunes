@@ -17,7 +17,7 @@ public class PlaneGenerator : MonoBehaviour {
 	private int platformSelector;
 	private float[] platformWidths;
 
-	public ObjectPooler[] theObjectPools;
+	//public ObjectPooler[] theObjectPools;
 
 	private float minHeight;
 	public Transform maxHeightPoint;
@@ -29,12 +29,12 @@ public class PlaneGenerator : MonoBehaviour {
 	public float randomCoinThreshold;
 
 	public float randomSpikeThreshold;
-	public ObjectPooler spikePool;
+	//public ObjectPooler spikePool;
 	public float randomEnemyThreshold;
-	public ObjectPooler enemyPool;
+	//public ObjectPooler enemyPool;
 
 	public float powerupHeight;
-	public ObjectPooler powerupPool;
+	//public ObjectPooler powerupPool;
 	public float powerupThreshold;
 	
 
@@ -43,9 +43,9 @@ public class PlaneGenerator : MonoBehaviour {
 
 		//platformWidth = thePlatform.GetComponent<BoxCollider>().size.x;
 
-		platformWidths = new float[theObjectPools.Length];
+	//	platformWidths = new float[theObjectPools.Length];
 
-		for (int i = 0; i < theObjectPools.Length; i++) 
+	/*	for (int i = 0; i < theObjectPools.Length; i++) 
 		{
 			platformWidths[i] = theObjectPools[i].pooledObject.GetComponent<BoxCollider2D>().size.x;
 		}
@@ -55,13 +55,13 @@ public class PlaneGenerator : MonoBehaviour {
 
 		theCoinGenerator = FindObjectOfType<CoinGenerator> ();
 
-
+*/
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (transform.position.x < generationPoint.position.x  ) 
+/*		if (transform.position.x < generationPoint.position.x  ) 
 		{
 			distanceBetween = Random.Range (distanceBetweenMin, distanceBetweenMax);
 			platformSelector = Random.Range (0, theObjectPools.Length);
@@ -81,10 +81,10 @@ public class PlaneGenerator : MonoBehaviour {
 			}
 
 			transform.position = new Vector3 (transform.position.x + ( platformWidths[platformSelector] / 2 )+ distanceBetween, heightChange, transform.position.z);
-
+*/
 
 			//Instantiate ( /*thePlatform, */ thePlatforms[platformSelector], transform.position, transform.rotation);
-
+		/*
 			GameObject newPlatform = theObjectPools[platformSelector].GetPooledObject();
 
 			newPlatform.transform.position = transform.position;
@@ -127,6 +127,6 @@ public class PlaneGenerator : MonoBehaviour {
 
 
 		}
-
+		*/
 	}
 }
